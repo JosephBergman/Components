@@ -10,12 +10,21 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let url = URL(string: "https://images.unsplash.com/photo-1530319067432-f2a729c03db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=980&q=80")!
+        return RemoteImage(url: url, loadingView: {
+            Image(systemName: "wifi")
+        }, imageView: { image in
+            image
+        }, errorView: { error in
+            Image(systemName: "wifi.slash")
+        })
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        NavigationView {
+            RootView().navigationBarTitle(Text("Components"))
+        }
     }
 }

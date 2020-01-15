@@ -13,6 +13,11 @@
 		7E0C4D2523CEA8CB00C37486 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C4D2423CEA8CB00C37486 /* Preview Assets.xcassets */; };
 		7E0C4D2823CEA8CB00C37486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0C4D2623CEA8CB00C37486 /* LaunchScreen.storyboard */; };
 		7E0C4D3223CEA93D00C37486 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C4D3123CEA93D00C37486 /* RootView.swift */; };
+		7E0C4D3823CEAC5100C37486 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C4D3723CEAC5100C37486 /* RemoteImage.swift */; };
+		7E0C4D3B23CEB0E400C37486 /* RemoteImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C4D3A23CEB0E400C37486 /* RemoteImageService.swift */; };
+		7E0C4D3D23CEB15B00C37486 /* RemoteImageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C4D3C23CEB15B00C37486 /* RemoteImageState.swift */; };
+		7EB34A5623CEB56D000F7D14 /* PlatformImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB34A5523CEB56D000F7D14 /* PlatformImageType.swift */; };
+		7EB34A5923CEBB74000F7D14 /* RemoteImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB34A5823CEBB74000F7D14 /* RemoteImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7E0C4D2723CEA8CB00C37486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E0C4D2923CEA8CB00C37486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E0C4D3123CEA93D00C37486 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7E0C4D3723CEAC5100C37486 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		7E0C4D3A23CEB0E400C37486 /* RemoteImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageService.swift; sourceTree = "<group>"; };
+		7E0C4D3C23CEB15B00C37486 /* RemoteImageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageState.swift; sourceTree = "<group>"; };
+		7EB34A5523CEB56D000F7D14 /* PlatformImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformImageType.swift; sourceTree = "<group>"; };
+		7EB34A5823CEBB74000F7D14 /* RemoteImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0C4D3023CEA8E800C37486 /* App */,
+				7E0C4D3423CEAA3100C37486 /* Images */,
 				7E0C4D2123CEA8CB00C37486 /* Assets.xcassets */,
 				7E0C4D2623CEA8CB00C37486 /* LaunchScreen.storyboard */,
 				7E0C4D2923CEA8CB00C37486 /* Info.plist */,
@@ -81,6 +92,34 @@
 				7E0C4D3123CEA93D00C37486 /* RootView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7E0C4D3423CEAA3100C37486 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C4D3923CEAF4400C37486 /* RemoteImage */,
+				7EB34A5723CEB578000F7D14 /* Utilities */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7E0C4D3923CEAF4400C37486 /* RemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C4D3A23CEB0E400C37486 /* RemoteImageService.swift */,
+				7EB34A5823CEBB74000F7D14 /* RemoteImageCache.swift */,
+				7E0C4D3C23CEB15B00C37486 /* RemoteImageState.swift */,
+				7E0C4D3723CEAC5100C37486 /* RemoteImage.swift */,
+			);
+			path = RemoteImage;
+			sourceTree = "<group>";
+		};
+		7EB34A5723CEB578000F7D14 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7EB34A5523CEB56D000F7D14 /* PlatformImageType.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB34A5623CEB56D000F7D14 /* PlatformImageType.swift in Sources */,
 				7E0C4D1C23CEA8C900C37486 /* AppDelegate.swift in Sources */,
+				7E0C4D3D23CEB15B00C37486 /* RemoteImageState.swift in Sources */,
 				7E0C4D1E23CEA8C900C37486 /* SceneDelegate.swift in Sources */,
+				7EB34A5923CEBB74000F7D14 /* RemoteImageCache.swift in Sources */,
 				7E0C4D3223CEA93D00C37486 /* RootView.swift in Sources */,
+				7E0C4D3823CEAC5100C37486 /* RemoteImage.swift in Sources */,
+				7E0C4D3B23CEB0E400C37486 /* RemoteImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
