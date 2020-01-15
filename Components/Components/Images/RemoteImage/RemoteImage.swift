@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-public struct RemoteImage<LoadingView: View, ErrorView: View, ImageView: View>: View {
+public struct RemoteImage<LoadingView: View, ImageView: View, ErrorView: View>: View {
     
     // MARK: Properties
     private let url: URL
